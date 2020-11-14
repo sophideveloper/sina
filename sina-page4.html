@@ -8,27 +8,41 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/> 
+  <link href="//db.onlinewebfonts.com/c/7dd521684d3f10c1c37888f7c90d355a?family=A+Ghasem" rel="stylesheet" type="text/css"/> 
 <style>
+  .user-login-button{
+     background-color: transparent;
+     border:1px solid #DCDCDC;
+     font-size:12px;
+  }
+  .user-login-box{
+    margin-top: 7%;float:left;
+    display:inline-block;
+  }
   .search-input{
   width: 100%;
-  border-radius: 4px;
+  border-radius: 8px;
   font-size:10px; 
   background-image: url('https://img.icons8.com/ios-glyphs/30/000000/search.png');
   background-color: #DCDCDC;
   background-position: 98% 50%;
   background-repeat: no-repeat;
   padding: 15px 45px 12px 40px;
+  margin-top:2%;
   opacity:0.5;
   text-align:right;
+  border:none;
 }
 .topnav a {
   float: right;
   display: block;
   color: #787878;
   text-align: center;
-  padding: 14px 16px;
+  padding: 12px 32px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: 'IranianSansRegular'; 
   font-weight:bold;
   /*font-family: 'Samim', sans-serif;*/
 }
@@ -43,10 +57,10 @@
       text-align:right;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      border-radius: 10px;
-      padding: 2%;
+      border-radius: 10px;    font-family: 'IranianSansRegular'; 
+      padding: 3%;
       background-color: white;  
-      margin-top:1%;
+      margin:1%;
       font-size:13px;
     }
 
@@ -61,18 +75,24 @@
      font-size:20px;
       font-weight:bold;
       text-align: right;
+      font-family: 'IranianSansRegular'; 
     }
 .table {
     border-bottom:0px !important;
+    font-family: 'IranianSansRegular'; 
+    text-align: center
 }
 .table th, .table td {
     border: 1px !important;
     text-align: center;
 
+
 }
+
 .table th{
   color:blue;
   font-weight:bold;
+  font-size:20px;
 }
 .fixed-table-container {
     border:0px !important;
@@ -81,96 +101,139 @@
   width:40%;
 }
 @media only screen and (max-width: 600px) {
-  .footer-table{
+  .table{
+    width:100%;
+}
+  }
+  @media only screen and (max-width: 600px) {
+  .user-login-box{
     width:100%;
   text-align: center;
-
-  }
+  margin-top: 1%;
+}
 </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="row" style="margin-top:20px;">
-    <div class="col-sm-3" style="text-align:left">
-      <i class="fa fa-shopping-basket"> </i>
-      <button class="btn" style="padding:1%; background-color: transparent;border:1px solid #DCDCDC;margin-left:10px;width:60%;height:40px">
+<div class="container-fluid " style="padding-right:8%;padding-left:8%">
+  <div class="row" >
+    <div class="col-sm-3" >
+      <div style="display: block;"> 
+              <span class="user-login-box" style="float:left">
+        
+          <span style="height:30px;border-right:2px solid #DCDCDC;padding:4px;margin:20px">
+            <i class="fa fa-shopping-basket"> 
+             </i>
+          </span>
+      <button class="btn user-login-button">
        ورود به حساب کاربری
        <i class="fa fa-user-o" aria-hidden="true"></i>
       </button>
+      </span>
+      </div>
     </div>
-    <div class="col-sm-6" >
+    <div class="col-sm-7" >
       <form>
         <input type="text" class="search-input" name="search" placeholder="...کالای مورد نظر خود را جستجو کنید">
       </form>
     </div>
-    <div class="col-sm-3"style="text-align:center;font-size:30px;">آسان مارکت</div>
-    <br/>
-    <div style="text-align:center;font-size:30px;"> Asan Market </div>
+    <div class="col-sm-2">
+      <div style="text-align:center;font-family:  A Ghasem; font-size:30px;">
+        آسان مارکت
+      </div>
+      <div style="text-align:center;font-size:20px;"> Asan Market </div>
+    </div>
   </div>
    <div class="row" style="margin-top:3%;"> 
     <div class="topnav" id="myTopnav">
       <a class="icon">
-      <i class="fa fa-bars"></i>
+<div></div>
+        
+        <span style="height:30px; padding:5px;border-left:2px solid #DCDCDC">
+          دسته بندی کالاها
+        </span>
+  
+      <i class="fa fa-bars"> </i>
       </a>
-      <a href="#home" class="active">کامپیوتر</a>
-      <a href="#news">لوازم جانبی موبایل</a>
-      <a href="#contact">ذخیره سازی</a>
-      <a href="#about">کنسول بازی</a>
-      <a href="#news">صوتی و تصویری</a>
-      <a href="#contact">محصولات اپل</a>
-      <a href="#about">سایر محصولات</a>
-      <a href="#news">سایز محصولات</a>
+      <a href="#home" class="active">کامپیوتر
+      <i class="fa fa-desktop"> </i>
+      </a>
+      <a href="#news">لوازم جانبی موبایل
+      <i class="fa fa-headphones"> </i>
+    </a>
+      <a href="#contact">ذخیره سازی
+        <i class="fa fa-memory" aria-hidden="true"></i>
+      </a>
+      <a href="#about">کنسول بازی
+        <i class="fa fa-gamepad" aria-hidden="true"></i>
+
+      </a>
+      <a href="#news">صوتی و تصویری
+      <i class="fa fa-television"> </i>
+      </a>
+      <a href="#contact">محصولات اپل
+      <i class="fa fa-apple"> </i>
+      </a>
+      <a href="#about">سایر محصولات
+      <i class="fa fa-plus-circle"> </i>
+      </a>
     </div>
   </div>
 </div>
-<div class="container-fluid" style="background-color: #E8E8E8;padding:4%;">
-  <div class="container">
+<div class="container-fluid" style="background-color: #E8E8E8;padding-right:8%;padding-left:8%;padding-bottom:3%">
+  <div class="container-fluid">
     <div class="row">
       <div class="col-sm-6">
          <div class="delivery-order-card-title">
-              آدرس تحویل سفارش را انتخاب نمایید 
+            <div style="padding:4%">
+               افزودن آدرس جدید
+              
+            </div>
               </div>
               <div class="delivery-order-card">
               <form  action="" >
-                <div style="margin:3%;font-weight:bold">
-                  مشخصات سفارش
+                <div style="margin-right:2%;margin-bottom:2%;font-weight:bold;font-size:15px">
+                  :مشخصات گیرنده
                 </div>
             <div class="form-group col-sm-4 ">
-              <input type="" class="form-control" id="number" placeholder="شماره موبایل:" name="family">
+              <input type="" class="form-control" id="number" placeholder=":شماره موبایل" name="family" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-sm-4">
-              <input type="text" class="form-control" id="name" placeholder="نام خانوادگی:" name="family">
+              <input type="text" class="form-control" id="name" placeholder=":نام خانوادگی" name="family" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-sm-4">
-              <input type="text" class="form-control" id="name" placeholder="نام:" name="name">
+              <input type="text" class="form-control" id="name" placeholder=":نام" name="name" style="border:none; background-color: #F5F5F5">
             </div>
+                <hr/ style="width:80%">
 
-               <div style="margin:3%;font-weight:bold">
-                  جزییات سفارش
+               <div style="margin:2%;font-weight:bold;font-size:15px">
+
+                  :جزییات آدرس
                 </div>
                         <div class="form-group col-md-4">
             </div>
             <div class="form-group col-md-4">
-              <input type="" class="form-control" id="number" placeholder=":استان" name="family">
+              <input type="" class="form-control" id="number" placeholder=":استان" name="family" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="name"  placeholder=":شهر" name="family">
+              <input type="text" class="form-control" id="name"  placeholder=":شهر" name="family" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-sm-12">
-              <textarea class="form-control" rows="4" id="comment"></textarea>
+              <textarea class="form-control" rows="3" id="comment" placeholder=":آدرس پستی" style="border:none; background-color: #F5F5F5;text-align: right"></textarea>
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="name" placeholder=":کد پستی" name="name">
+              <input type="text" class="form-control" id="name" placeholder=":کد پستی" name="name" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-md-4">
-              <input type="text" class="form-control" id="name"  placeholder=":واحد" name="family">
+              <input type="text" class="form-control" id="name"  placeholder=":واحد" name="family" style="border:none; background-color: #F5F5F5">
             </div>
             <div class="form-group col-md-4">
-              <input type="" class="form-control" id="number" placeholder=":پلاک" name="family">
+              <input type="" class="form-control" id="number" placeholder=":پلاک" name="family" style="border:none; background-color: #F5F5F5">
             </div>
-            <div class="form-group" class="col-sm-4">
-            <button type="submit" class="btn btn-primary" >تایید و ثبت آدرس</button>  
+                <hr/ style="width:80%">
+
+            <div  class="form-group" style="text-align: left;margin:2%; ">
+            <button type="submit" class="btn btn-primary">تایید و ثبت آدرس</button>  
             </div>
           </form>    
 
@@ -179,11 +242,17 @@
       </div>
       <div class="col-sm-6">
               <div class="delivery-order-card-title">
+                <div style="padding:4%">
               آدرس تحویل سفارش را انتخاب نمایید 
               </div>
+              </div>
               <div class="delivery-order-card">
-              <h4><b>:به این آدرس ارسال شود</b></h4> 
-              <p>تهران - سعادت آباد- خیابان فتحی - پلاک ۵۴۳۲ </p> 
+              <p style="font-weight: bold;font-size:15px">
+                :به این آدرس ارسال شود
+                <i class="fa fa-circle"></i>
+              </p>
+              <div style="padding-right:4%;">
+                <p>تهران - سعادت آباد- خیابان فتحی - پلاک ۵۴۳۲ </p> 
               <p>
                 656565656
                 <i class="fa fa-envelope-o"></i>
@@ -192,21 +261,29 @@
                 656565656
                 <i class="fa fa-phone"></i>
               </p>
-                <p>
+                <div>
                  محمد عمرانی
                 <i class="fa fa-user-o"></i>
-              </p>
-                  <button class="btn btn-default" style="border:none;float:left">
+              </div>
+              </div>
+                  <div  class="form-group" style="text-align:left;height:10px; ">
+                  <button class="btn btn-default" style="border:none;color:#483D8B">
                     <i class="fa fa-edit"> ویرایش </i>
                   </button>                  
-                  <button class="btn btn-default" style="border:none;">
+                  <button class="btn btn-default" style="border:none;color:#B22222">
                     <i class="fa fa-trash"> حذف </i>
                   </button>
+                </div>
                             </div>
+                            <br/>
 
               <div class="delivery-order-card">
-              <h4><b>:به این آدرس ارسال شود</b></h4> 
-              <p>تهران - سعادت آباد- خیابان فتحی - پلاک ۵۴۳۲ </p> 
+              <p style="font-weight: bold;font-size:15px">
+                :به این آدرس ارسال شود
+                <i class="fa fa-circle"></i>
+              </p>
+              <div style="padding-right:4%;">
+                <p>تهران - سعادت آباد- خیابان فتحی - پلاک ۵۴۳۲ </p> 
               <p>
                 656565656
                 <i class="fa fa-envelope-o"></i>
@@ -215,55 +292,67 @@
                 656565656
                 <i class="fa fa-phone"></i>
               </p>
-                <p>
+                <div>
                  محمد عمرانی
                 <i class="fa fa-user-o"></i>
-              </p>
-                  <button class="btn btn-default" style="border:none;float:left">
+              </div>
+              </div>
+                  <div  class="form-group" style="text-align:left;height:10px; ">
+                  <button class="btn btn-default" style="border:none;color:#483D8B">
                     <i class="fa fa-edit"> ویرایش </i>
                   </button>                  
-                  <button class="btn btn-default" style="border:none;">
+                  <button class="btn btn-default" style="border:none;color:#B22222">
                     <i class="fa fa-trash"> حذف </i>
                   </button>
-                            </div>
+                </div>
+                       
+                       </div>
                             </div>
                           </div>
                         </div>
   </div>
 <div class="container">
-  <div class="row" >
-    <div class="col-sm-6" >
-      <table class="table borderless footer-table" >
-    <thead>
-      ما را در شبکه های اجتماعی دنبال کنید 
-    </thead>
+  <div class="row" style="margin-top:5%">
+    <div class="col-md-6">
+      <table class="table borderless" >
+<thead>
+  <tr>
+    <th>  
+    </th >
+    <th style="font-size:14px !important ; color: black !important">
+      ما را در شبکه های اجتماعی دنبال کنید
+
+    </th>
+  </tr>
+</thead>
     <tbody>
-      <tr>
+<tr>
         <td>
-        <i class="fa fa-twitter"></i>
+        <i class="fa fa-twitter fa-lg"></i>
         </td>
         <td>
-          <i class="fa fa-instagram"></i>
+          <i class="fa fa-instagram fa-lg"></i>
         </td>
         <td>
-        <i class="fa fa-whatsapp"></i>
+        <i class="fa fa-whatsapp fa-lg"></i>
         </td>
       </tr>
       <tr>
         <td>
-        <i class="fa fa-twitter"></i>
+         <img style="width:60px;height:70px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/252/apple-logo_f8ff.png">
         </td>
         <td>
-          <i class="fa fa-instagram"></i>
+         <img style="width:60px;height:70px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/252/apple-logo_f8ff.png">
+        
         </td>
         <td>
-        <i class="fa fa-whatsapp"></i>
+         <img style="width:60px;height:70px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/openmoji/252/apple-logo_f8ff.png">
+
         </td>
       </tr>
     </tbody>
   </table>
     </div>
-
     <div class="col-md-6">
       <table class="table borderless" >
     <thead>
