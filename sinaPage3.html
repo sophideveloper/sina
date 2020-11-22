@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/7dd521684d3f10c1c37888f7c90d355a?family=A+Ghasem" rel="stylesheet" type="text/css"/>
@@ -161,87 +162,82 @@
 			margin-bottom:20px;
 			font-size:15px;
 		}
-      .shopping-basket-card:hover {
-      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-      }
-      .delivery-order-card input{
-      background-color:transparent;text-align:right;
-      }
-      .delivery-order-card-title{
-      color:#4682B4;
-      font-size:16px;
-      font-weight:bold;
-      text-align: right;
-      font-family: 'IranianSansRegular';
-      }
+        .shopping-basket-card:hover {
+      		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      	}
+      	.delivery-order-card input{
+      		background-color:transparent;
+      		text-align:right;
+      	}
+      	.delivery-order-card-title{
+		    color:#4682B4;
+		    font-size:16px;
+		    font-weight:bold;
+		    text-align: right;
+		    font-family: 'IranianSansRegular';
+      	}
 
 
-      .footer-container{
-      	margin-top:2%;
-      }
-      .footer-partner-box{
-      	display:flex;
-      	justify-content: center
-      }
-      .footer-partner-table{
-      	text-align: center;
-      	border-bottom:0px !important;
-      font-family: 'IranianSansRegular';
-      width:40%;
-      border-bottom:0px !important;
-      }
-      .footer-partner-table th, .footer-partner-table td{
-      border: 1px !important; 
-      height:50px;    	
-      }
-      .footer-about-table {
-      border-bottom:0px !important;
-      font-family: 'IranianSansRegular';
-      text-align: right;
-      }
-      .footer-about-table th, .footer-about-table td {
-      border: 1px !important;
-      text-align: right;
-      }
+       .footer-container{
+      		margin-top:2%;
+      	}
+       .footer-partner-box{
+      		display:flex;
+      		justify-content: center
+      	}
+      	.footer-partner-table{
+      		text-align: center;
+      		border-bottom:0px !important;
+      		font-family: 'IranianSansRegular';
+      		width:40%;
+      		border-bottom:0px !important;
+      	}
+      	.footer-partner-table th, .footer-partner-table td{
+      		border: 1px !important; 
+      		height:50px;    	
+      	}
+      	.footer-about-table {
+      		border-bottom:0px !important;
+      		font-family: 'IranianSansRegular';
+      		text-align: right;
+      	}
+      	.footer-about-table th, .footer-about-table td {
+      		border: 1px !important;
+      		text-align: right;
+      	}
 
-      .footer-about-table th{
-      color:#4682B4;
-      font-weight:bold;
-      font-size:20px;
-      }
-      @media only screen and (max-width: 800px) {
-      .user-login-box{
-      margin-top: 1%;
-}
-     @media only screen and (max-width: 800px) {
-      .card-appearance{
-      flex-column-reverse
-}
-.card-appearance{
-   display:flex;
-   flex-direction: column;
- }
-
-
- .card-appearance div:nth-child(1){
-   order:2;
- }
-
- .card-appearance div:nth-child(2){
-   order:1;
- }
-
-//change the 1024px for you desktop size target
-@media (min-width:1024px){
-
- .card-appearance div:nth-child(1){
-   order:1;
- }
-
- .card-appearance div:nth-child(2){
-   order:2;
- }
-}
+      	.footer-about-table th{
+      		color:#4682B4;
+      		font-weight:bold;
+      		font-size:20px;
+      	}
+      	@media only screen and (max-width: 800px) {
+      		.user-login-box{
+      			margin-top: 1%;
+			}
+     	@media only screen and (max-width: 800px) {
+      		.card-appearance{
+      			flex-column-reverse;
+      			text-align: center;
+			}
+		.card-appearance{
+   			display:flex;
+   			flex-direction: column;
+ 		}
+ 		.card-appearance div:nth-child(1){
+   			order:2;
+ 		}
+ 		.card-appearance div:nth-child(2){
+   			order:1;
+ 		}
+		@media (min-width:1024px){
+ 			.card-appearance div:nth-child(1){
+			   order:1;
+ 		}
+ 			.card-appearance div:nth-child(2){
+   				order:2;
+ 		}
+	}
     </style>
 </head>
     <body>
@@ -359,11 +355,12 @@
 
 						<div class="col-md-8">
 							<div class="shopping-basket-card">
-								<div class="card" style="padding:1%;padding-bottom:none!important">
+								<div class="card" style="padding:2%;padding-bottom:none!important">
   									<div class="row no-gutters">
-    									<div class="col-md-2">
+    									<div class="card-appearance">
+    										<div class="col-md-2">
 	        								<div style="font-size:18px;">
-	        									<div>
+	        									<div >
 	        										تومان 123456
 	        									</div>
 	        								</div>
@@ -405,11 +402,12 @@
 									     <div class="col-md-3">
 									      <img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="card-img" alt="..." style="width:100%">
 									    </div>
+    									</div>
 									</div>
         							<hr style="width:90%;"/>
         							<div class="row no-gutters">
-    									<div class="col-md-2">
-	        								<div style="font-size:18px;">
+    									<div class="col-md-2 " >
+	        								<div class="d-flex align-items-end" style="font-size:18px; height: 150px;">
 	        									<div>
 	        										تومان 123456
 	        									</div>
