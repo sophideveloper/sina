@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/iranian-sans" type="text/css"/>
     <link href="//db.onlinewebfonts.com/c/7dd521684d3f10c1c37888f7c90d355a?family=A+Ghasem" rel="stylesheet" type="text/css"/>
+
     <style>
     	.header-container{
     		padding-left: 6%;
@@ -121,10 +122,48 @@
 	    	font-size:13px;
 	    	margin:3%;
 	      	margin-top:7% !important;
-	      	padding-bottom:2%;
-	      	margin-bottom:2%;
+	      	padding-bottom:none;
 
       }
+		.shopping-basket-card-production-price{
+			font-size:18px;
+		}  
+		.production-card-body{
+			line-height: 40px;
+			 direction: rtl;	
+		}
+		.production-card-title{
+			font-weight: bold
+		} 
+		.add-and-remove-appearance{
+			margin-top:2%;
+			display: inline-flex;
+		} 
+		.add-and-remove-button{
+			width:110px;
+			height:auto; 
+			border:1px solid #DCDCDC;
+			display:flex;
+			justify-content: space-around;
+			border-radius:7px; 
+		}  
+		.add-button{
+			border:none;
+			padding:none!important;
+			background-color:white
+		}
+		.add-button-text{
+			color:#4682B4;
+			font-weight: bolder;
+			font-size:20px;
+		}
+		.remove-button{
+			border:none;
+			text-decoration: none;
+			padding:none!important;
+			font-size:20px;
+			background-color:white
+		}
         .your-suggestion-card{
 	    	height: auto;
 	    	width:92%;
@@ -141,7 +180,7 @@
 	    	padding-top:7%;
 
 	      }
-       .suggestion-box-title-horizontal-line{
+       .suggestion-card-title-horizontal-line{
       		border-bottom: 2px solid #DCDCDC;
       		direction: ltr; 
       		width:100%;
@@ -149,18 +188,33 @@
       		margin-bottom: :20px
       	}
       
-		.suggestion-box-title-horizontal-line:after{
+		.suggestion-card-title-horizontal-line:after{
 			content: '';
 	  		display: block;
 	  		border-bottom: 2px solid #4682B4;
 	  		margin-bottom: -2px;
 	  		max-width: 50%;
 		}
-		.suggestion-box-title{
+		.suggestion-card-title{
 			direction: rtl;
 			font-family: 'iranian-sans';
 			margin-bottom:20px;
 			font-size:15px;
+		}
+		.suggestion-card-image{
+			width:100px;
+			height:150px;
+			margin:18px;
+		}
+		.suggestion-card-discount-button{
+			height:25px;
+			width:60px;
+			background-color: red; 
+			border:none; 
+			border-radius:4px;
+			font-size:10px;
+			color:white; 
+			font-weight:bold
 		}
         .shopping-basket-card:hover {
       		box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -176,8 +230,6 @@
 		    text-align: right;
 		    font-family: 'IranianSansRegular';
       	}
-
-
        .footer-container{
       		margin-top:2%;
       	}
@@ -215,20 +267,22 @@
       		.user-login-box{
       			margin-top: 1%;
 			}
+			
+
      	@media only screen and (max-width: 800px) {
       		.card-appearance{
       			flex-column-reverse;
       			text-align: center;
 			}
-		.card-appearance{
-   			display:flex;
-   			flex-direction: column;
- 		}
- 		.card-appearance div:nth-child(1){
-   			order:2;
- 		}
- 		.card-appearance div:nth-child(2){
-   			order:1;
+			.card-appearance{
+   				display:flex;
+   				flex-direction: column;
+ 			}
+ 			.card-appearance div:nth-child(1){
+   				order:2;
+ 			}
+ 			.card-appearance div:nth-child(2){
+   				order:1;
  		}
 		@media (min-width:1024px){
  			.card-appearance div:nth-child(1){
@@ -325,15 +379,18 @@
         	<div class="row" >
         		<div class="card-appearance">
         			<div class="col-md-3 col-md-offset-1" >
+
+<!-- suggesion card -->
+
 		        		<div class="your-suggestion-card">
-		        			<div class="suggestion-box-title-horizontal-line">
-		        				<div class="suggestion-box-title">
+		        			<div class="suggestion-card-title-horizontal-line">
+		        				<div class="suggestion-card-title">
 		        					پیشنهاد ویژه برای شما
 		        					
 		        				</div>
 		        			</div>
 				    		<hr>
-				    		<img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" style="width:100px;height:150px;margin:18px;">
+				    		<img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="suggestion-card-image">
 					    	<div>
 					    		پایه شارژ دسته سونی
 					    	</div>
@@ -345,29 +402,30 @@
 					  			مشاهده
 					  		</a>
 					  		<br/>
-					  		<button style="height:25px;width:60px;background-color: red; border:none; border-radius:4px; font-size:10px;color:white; font-weight:bold">
+					  		<button class="suggestion-card-discount-button">
 					  			31% off
 					  		</button>
 				  			</div>
 		        		</div>
 		        	</div>
 
+<!-- end of suggesion card -->
 
+
+<!-- production card -->
 						<div class="col-md-8">
 							<div class="shopping-basket-card">
-								<div class="card" style="padding:2%;padding-bottom:none!important">
+								<div class="card" style="padding:3%;">
   									<div class="row no-gutters">
     									<div class="card-appearance">
-    										<div class="col-md-2">
-	        								<div style="font-size:18px;">
-	        									<div>
+    										<div class="col-md-2" >
+	        									<div class="shopping-basket-card-production-price">
 	        										تومان 123456
 	        									</div>
-	        								</div>
 	        							</div>
 									    <div class="col-md-7">
-									    	<div class="card-body" style=" line-height: 40px; direction: rtl;">
-									        	<h4 class="card-title" style="font-weight: bold">
+									    	<div class="production-card-body">
+									        	<h4 class="production-card-title">
 									        	 	دسته بازی سونی طلایی DualShock4
 												</h4>
 												<div >
@@ -380,43 +438,50 @@
 	        									</i>
 	        										موجود در انبار
 	        									</div>
-	        									<div style="margin-top:2%;">
-	        										<button class="btn btn-default" style="width:110px;font-size:20px">
-						        						<span style="color:#4682B4;; font-weight:bolder;">
-						        							+
-						        						</span>
-						        						<span>
-						        						<span style="padding-left:18%; padding-right: 18%;color:#4682B4;">
-						        							   1   
-						        						</span>
-						        							-    
-						        						</span>
-						        					</button>
-						        					<button class="btn btn-default" style="border:none;">
+	        									<div class="add-and-remove-appearance">
+	        										<div class="add-and-remove-button">
+						        						<button class="btn btn-default add-button">
+	        												<div class="add-button-text">
+	        													+
+	        												</div>
+	        											</button>
+	        											<div style="color:#4682B4">
+	        												1
+	        											</div>
+	        											<button class="btn btn-default remove-button" >
+	        												-
+	        											</button>
+						        					</div>
+						        					<div>
+						        							<button class="btn btn-default" style="border:none;">
 						        						<i class="fa fa-trash"> </i>
 						        						حذف
 						        					</button>
+						        					</div>
 	        									</div>
       										</div>
     									</div>
 									     <div class="col-md-3">
-									      <img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="card-img" alt="..." style="width:100%">
+									      	<img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="card-img" alt="..." style="width:100%">
 									    </div>
     									</div>
 									</div>
-        							<hr style="width:90%;"/>
+
+
+        							<hr style="width:96%;"/>
+
+<!-- second product -->
+
         							<div class="row no-gutters">
     									<div class="card-appearance">
-    										<div class="col-md-2">
-	        								<div style="font-size:18px;">
-	        									<div>
+    										<div class="col-md-2" >
+	        									<div class="shopping-basket-card-production-price">
 	        										تومان 123456
 	        									</div>
-	        								</div>
 	        							</div>
 									    <div class="col-md-7">
-									    	<div class="card-body" style=" line-height: 40px; direction: rtl;">
-									        	<h4 class="card-title" style="font-weight: bold">
+									    	<div class="production-card-body">
+									        	<h4 class="production-card-title">
 									        	 	دسته بازی سونی طلایی DualShock4
 												</h4>
 												<div >
@@ -429,30 +494,48 @@
 	        									</i>
 	        										موجود در انبار
 	        									</div>
-	        									<div style="margin-top:2%;">
-	        										<button class="btn btn-default" style="width:110px;font-size:20px">
-						        						<span style="color:#4682B4;; font-weight:bolder;">
-						        							+
-						        						</span>
-						        						<span>
-						        						<span style="padding-left:18%; padding-right: 18%;color:#4682B4;">
-						        							   1   
-						        						</span>
-						        							-    
-						        						</span>
-						        					</button>
-						        					<button class="btn btn-default" style="border:none;">
+	        									<div class="add-and-remove-appearance">
+	        										<div class="add-and-remove-button">
+						        						<button class="btn btn-default add-button">
+	        												<div class="add-button-text">
+	        													+
+	        												</div>
+	        											</button>
+	        											<div style="color:#4682B4">
+	        												1
+	        											</div>
+	        											<button class="btn btn-default remove-button" >
+	        												-
+	        											</button>
+						        					</div>
+						        					<div>
+						        							<button class="btn btn-default" style="border:none;">
 						        						<i class="fa fa-trash"> </i>
 						        						حذف
 						        					</button>
+						        					</div>
 	        									</div>
       										</div>
     									</div>
 									     <div class="col-md-3">
-									      <img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="card-img" alt="..." style="width:100%">
+									      	<img src="https://scx2.b-cdn.net/gfx/news/hires/2019/googleschall.jpg" class="card-img" alt="..." style="width:100%">
 									    </div>
     									</div>
 									</div>
+
+
+        							<hr style="width:96%;"/>
+
+        							<div style="display:flex; justify-content: space-between;margin-left:2%; margin-right: 2%">
+        								<div style="font-size:20px;">
+        									مبلغ قابل پرداخت: ۳۴۲۶۵۴  تومان
+        								</div>
+        								<button class="btn btn-primary" style="width:15%">
+        									ادامه فرآیند خرید
+        								</button>
+        							
+        							</div>
+
 								</div>        						
         					</div>
         				</div>
