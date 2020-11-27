@@ -49,8 +49,9 @@
           left: 0;
           width: 100%;
           height:700px;
-          border-radius:5px;
-          background-size: cover;
+          border-radius:10px;
+          object-fit: cover
+          
         }
         .carousel-content {
           position: absolute;
@@ -61,41 +62,40 @@
           text-shadow: 0 1px 2px rgba(0,0,0,.6);
         }
         .category-small-box1{
-              width: 100%;
-              border-radius: 10px; 
-              background-image: url('https://q3c2r8n4.stackpathcdn.com/wp-content/uploads/2020/09/what-is-a-computer-algorithm.jpg');
-              background-size:cover;
-              height: 335px;
+          width: 100%;
+          border-radius: 10px; 
+          background-image: url('https://q3c2r8n4.stackpathcdn.com/wp-content/uploads/2020/09/what-is-a-computer-algorithm.jpg');
+          background-size:cover;
+          height: 335px;
 
-            }
-          .category-small-box2{
-            width: 100%;
-            border-radius: 10px; 
-            background-image: url('https://q3c2r8n4.stackpathcdn.com/wp-content/uploads/2020/09/what-is-a-computer-algorithm.jpg');
-            background-size:cover;
-            margin-top:30px;
-            height: 335px;
+        }
+        .category-small-box2{
+          width: 100%;
+          border-radius: 10px; 
+          background-image: url('https://q3c2r8n4.stackpathcdn.com/wp-content/uploads/2020/09/what-is-a-computer-algorithm.jpg');
+          background-size:cover;
+          margin-top:30px;
+          height: 335px;
+        }
+ 
+        .category-small-box1-content{
+          position: absolute;
+          top:10%;
+          left: 4%;
+          z-index: 20;
+          color: white;
+          padding:10%;
 
-          }
-   
-          .category-small-box1-content{
-            position: absolute;
-            top:10%;
-            left: 4%;
-            z-index: 20;
-            color: white;
-            padding:10%;
+        }
+        .category-small-box2-content{
+          position: absolute;
+          top:62%;
+          left: 4%;
+          z-index: 20;
+          color: white;
+          padding:10%;
 
-          }
-          .category-small-box2-content{
-            position: absolute;
-            top:60%;
-            left: 4%;
-            z-index: 20;
-            color: white;
-            padding:10%;
-
-    }
+        }
         .category-small-box-title{
           font-size: 18px;
           text-align: center;
@@ -321,9 +321,9 @@
     <!-- Begin page content -->
 
     <div class="container-fluid">
-      <div class="row " style="padding-left:11%;padding-right:11%;padding-top:10%;" >
-        <div class="col-sm-9" >
-            <div id="myCarousel" class="carousel slide" >
+      <div class="row " style="padding-left:11%;padding-right:11%;padding-top: 10%;" >
+        <div class="col-sm-9 pb-4" >
+              <div id="myCarousel" class="carousel slide" >
                   <ol class="carousel-indicators">
                       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                       <li data-target="#myCarousel" data-slide-to="1"></li>
